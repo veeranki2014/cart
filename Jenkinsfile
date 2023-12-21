@@ -4,30 +4,36 @@ pipeline {
   }
 
   stages {
-    stage ('Build code')
+    stage ('Build code') {
       steps {
         echo "Build the code"
       }
+    }
 
-    stage ('Unit Testing')
+    stage ('Unit Testing') {
           steps {
             echo "Unit Testing"
           }
+    }
 
-    stage ('Code Analysis')
+
+    stage ('Code Analysis') {
           steps {
             echo "Code Analysis"
           }
+    }
 
-    stage ('Security checks')
+    stage ('Security checks') {
           steps {
             echo "Security checks"
           }
+    }
 
-    stage ('Code Publish')
+    stage ('Code Publish') {
           steps {
             echo "Code Publish"
           }
+    }
   }
 
 //   post {
