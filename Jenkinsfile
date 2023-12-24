@@ -31,6 +31,10 @@ pipeline {
     }
 
     stage ('Code Publish') {
+      when {
+          expression { env.TAG_NAME ==~ ".*" }
+
+          }
           steps {
             echo "Code Publish"
             sh 'env'
