@@ -33,6 +33,7 @@ pipeline {
     stage ('Code Publish') {
           steps {
             echo "Code Publish"
+            sh 'env'
           }
     }
   }
